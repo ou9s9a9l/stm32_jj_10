@@ -531,6 +531,26 @@
           </Files>
         </Group>
         <Group>
+          <GroupName>rf</GroupName>
+          <Files>
+            <File>
+              <FileName>sx1276-LoRa.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\USER\sx1276-LoRa.c</FilePath>
+            </File>
+            <File>
+              <FileName>Delay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\USER\Delay.c</FilePath>
+            </File>
+            <File>
+              <FileName>rf.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\USER\rf.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
           <GroupName>::CMSIS</GroupName>
         </Group>
         <Group>

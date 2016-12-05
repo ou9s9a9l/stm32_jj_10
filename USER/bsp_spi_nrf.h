@@ -65,24 +65,24 @@
 //#define NRF_CE_LOW()	      GPIO_ResetBits(GPIOA,GPIO_Pin_2)			      //CE÷√µÕ
 //#define NRF_Read_IRQ()		  GPIO_ReadInputDataBit ( GPIOA, GPIO_Pin_3)  //÷–∂œ“˝Ω≈
 
-#if 0
+#if 1
 #define NRF_CSN_HIGH()      GPIO_SetBits(GPIOA, GPIO_Pin_4)
 #define NRF_CSN_LOW()       GPIO_ResetBits(GPIOA, GPIO_Pin_4)		        //csn÷√µÕ
 #define NRF_CE_HIGH()	      GPIO_SetBits(GPIOA,GPIO_Pin_1)
 #define NRF_CE_LOW()	      GPIO_ResetBits(GPIOA,GPIO_Pin_1)			      //CE÷√µÕ
 #define NRF_Read_IRQ()		  GPIO_ReadInputDataBit ( GPIOB, GPIO_Pin_0)  //÷–∂œ“˝Ω≈
-#elif 1
+#else
 #define NRF_CSN_HIGH()      GPIO_SetBits(GPIOA, GPIO_Pin_4)
 #define NRF_CSN_LOW()       GPIO_ResetBits(GPIOA, GPIO_Pin_4)		        //csn÷√µÕ
 #define NRF_CE_HIGH()	      GPIO_SetBits(GPIOA,GPIO_Pin_1)
 #define NRF_CE_LOW()	      GPIO_ResetBits(GPIOA,GPIO_Pin_1)			      //CE÷√µÕ
 #define NRF_Read_IRQ()		  GPIO_ReadInputDataBit ( GPIOB, GPIO_Pin_0)  //÷–∂œ“˝Ω≈
 #endif
-#define MOSI_H() GPIO_SetBits(GPIOA, GPIO_Pin_7)  
-#define MOSI_L() GPIO_ResetBits(GPIOA, GPIO_Pin_7)  
-#define SCLK_H() GPIO_SetBits(GPIOA, GPIO_Pin_5)  
-#define SCLK_L() GPIO_ResetBits(GPIOA, GPIO_Pin_5)  
-#define MISO()   GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_6)  
+#define MOSI_H() GPIO_SetBits(GPIOB, GPIO_Pin_5)  
+#define MOSI_L() GPIO_ResetBits(GPIOB, GPIO_Pin_5)  
+#define SCLK_H() GPIO_SetBits(GPIOB, GPIO_Pin_3)  
+#define SCLK_L() GPIO_ResetBits(GPIOB, GPIO_Pin_3)  
+#define MISO()   GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_4)  
   
 void SPI_NRF_Init(void);
 u8 SPI_NRF_RW(u8 dat);

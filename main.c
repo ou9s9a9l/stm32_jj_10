@@ -7,7 +7,7 @@
 #include "define.h" 
 #include "bsp_usart1.h"
 #include "stm_flash.h"
-
+#include "rf.h"
 u8 status,i,j;	//用于判断接收/发送状态
 u8 txbuf[32]={0,1,2,3};	 //发送缓冲
 u8 rxbuf[32]={0};			 //接收缓冲
@@ -44,8 +44,9 @@ void softinit(void)
 	
 	LED1( ON );	  // LED1 ON;		
 	Delay(0x2fffff);
-	SPI_NRF_Init1();
 	
+	#if 0
+	SPI_NRF_Init();
 	status = NRF_Check(); 
 	
 	if(status == SUCCESS)
@@ -53,6 +54,11 @@ void softinit(void)
 	else
 		LED1( OFF );
 	NRF_TX_Mode();
+	#else
+	//RFGPIOInit();
+	RFInit();	 //射频模块初始化
+	RFRxMode();	 //进入接收模式
+	#endif
 	//LED1( OFF );	  // LED1 ON;	
 	//LED1( OFF );	  // LED2 ON;		
 		/* USART1 配置模式为 115200 8-N-1，中断接收 */

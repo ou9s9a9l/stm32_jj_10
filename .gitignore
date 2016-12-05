@@ -26,8 +26,11 @@
 *.exe
 *.out
 *.app
+/Listings
 /Objects
 
+
+*.uvoptx
 # =========================
 # Operating System Files
 # =========================
